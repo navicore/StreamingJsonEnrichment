@@ -8,15 +8,17 @@ val sparkVersion = "2.0.2"
 
 libraryDependencies ++=
     Seq(
-      "com.rollbar" % "rollbar" % "0.5.3",
-      "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0",
       "ch.qos.logback" % "logback-classic" % "1.1.7",
-      "org.apache.spark" %% "spark-core" % sparkVersion % "provided",
-      "org.apache.spark" %% "spark-streaming" % sparkVersion % "provided",
-      "com.typesafe" % "config" % "1.2.1",
-      "org.scalaj" %% "scalaj-http" % "2.3.0",
       "com.github.benfradet" %% "spark-kafka-0-10-writer" % "0.2.0",
-      "org.apache.kafka" %% "kafka" % "0.10.1.1"
+      "com.rollbar" % "rollbar" % "0.5.3",
+      "com.typesafe" % "config" % "1.2.1",
+      "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0",
+      "org.apache.kafka" %% "kafka" % "0.10.1.1",
+      "org.apache.spark" %% "spark-core" % sparkVersion % "provided",
+      "org.apache.spark" %% "spark-sql" % sparkVersion % "provided",
+      "org.apache.spark" %% "spark-streaming" % sparkVersion % "provided",
+      "org.apache.spark" %% "spark-streaming-kafka-0-10" % "2.0.2",
+      "org.rogach" %% "scallop" % "2.0.2"
     )
 
 mainClass in assembly := Some("onextent.streaming.json.Enrichment")
