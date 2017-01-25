@@ -1,6 +1,8 @@
 *.class
+submit.sh
+.DS_Store
 *.log
-
+.idea/
 # sbt specific
 .cache
 .history
